@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://c42r8558dvmyi"]
+
+[ext_resource type="StyleBox" uid="uid://q222orvy57pf" path="res://themes/clashy/clashButtonHover.tres" id="1_3ic4g"]
+[ext_resource type="StyleBox" uid="uid://byx3e5blcxm1o" path="res://themes/clashy/clashButton.tres" id="1_kpcyw"]
+[ext_resource type="FontFile" uid="uid://qq52okilox71" path="res://themes/clashy/Acme-Regular.ttf" id="2_1eokn"]
+[ext_resource type="StyleBox" uid="uid://cxo32m6uciudf" path="res://themes/clashy/clashButtonPress.tres" id="3_dm7vf"]
+[ext_resource type="Texture2D" uid="uid://dnnvgg848rp73" path="res://themes/clashy/graphics/panel.svg" id="3_i7pvi"]
+[ext_resource type="StyleBox" uid="uid://2snm3okweqpc" path="res://themes/clashy/dangerClashButtonHover.tres" id="4_5o5bk"]
+[ext_resource type="Texture2D" uid="uid://cchrg2clllas8" path="res://themes/clashy/graphics/panel2.svg" id="4_g8b0v"]
+[ext_resource type="StyleBox" uid="uid://cs4adpd6rj16" path="res://themes/clashy/dangerClashButton.tres" id="5_7gjrq"]
+[ext_resource type="StyleBox" uid="uid://8aoy2hfwk68y" path="res://themes/clashy/dangerClashButtonPress.tres" id="6_n2fyu"]
+[ext_resource type="StyleBox" uid="uid://ijcks3fe2cy1" path="res://themes/clashy/successClashButtonHover.tres" id="9_pvlrv"]
+[ext_resource type="StyleBox" uid="uid://b3bs0xywspv6c" path="res://themes/clashy/successClashButton.tres" id="10_qu876"]
+[ext_resource type="StyleBox" uid="uid://7gnfvusfrfqy" path="res://themes/clashy/successClashButtonPress.tres" id="11_17f1f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8v2a"]
+texture = ExtResource("3_i7pvi")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ysvx"]
+texture = ExtResource("4_g8b0v")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("2_1eokn")
+default_font_size = 20
+Button/colors/font_outline_color = Color(0.162066, 0.162066, 0.162066, 1)
+Button/constants/outline_size = 6
+Button/font_sizes/font_size = 20
+Button/styles/disabled = null
+Button/styles/hover = ExtResource("1_3ic4g")
+Button/styles/normal = ExtResource("1_kpcyw")
+Button/styles/pressed = ExtResource("3_dm7vf")
+DangerButton/base_type = &"Button"
+DangerButton/styles/hover = ExtResource("4_5o5bk")
+DangerButton/styles/normal = ExtResource("5_7gjrq")
+DangerButton/styles/pressed = ExtResource("6_n2fyu")
+Label/colors/font_outline_color = Color(0.262932, 0.262932, 0.262932, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 6
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 5
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("2_1eokn")
+Panel/styles/panel = SubResource("StyleBoxTexture_e8v2a")
+SuccessButton/base_type = &"Button"
+SuccessButton/styles/hover = ExtResource("9_pvlrv")
+SuccessButton/styles/normal = ExtResource("10_qu876")
+SuccessButton/styles/pressed = ExtResource("11_17f1f")
+TabContainer/styles/panel = SubResource("StyleBoxTexture_8ysvx")
