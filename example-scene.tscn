@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://qxg03et7qjqr"]
+[gd_scene load_steps=8 format=3 uid="uid://qxg03et7qjqr"]
 
 [ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://themes/clashy/clashy.tres" id="1_g367q"]
 [ext_resource type="Texture2D" uid="uid://cxlcmxh70utbx" path="res://themes/clashy/graphics/background.png" id="2_s3qpa"]
 [ext_resource type="Texture2D" uid="uid://mta7kf22opvb" path="res://themes/clashy/graphics/black-fade-outline.svg" id="3_f6ykc"]
 [ext_resource type="Texture2D" uid="uid://d1x5oc5fssc3w" path="res://example_scene/graphics/upward_fade.svg" id="4_b4ixp"]
+[ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://themes/clashy/graphics/coin.svg" id="5_iuwhk"]
+[ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://themes/clashy/graphics/gem.svg" id="6_6h4kp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mpbc6"]
 
@@ -68,6 +70,7 @@ current_tab = 1
 clip_tabs = false
 
 [node name="Showcase" type="Panel" parent="CanvasLayer/Control/PanelContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
@@ -130,7 +133,6 @@ toggle_mode = true
 text = "Danger Toggle"
 
 [node name="Buttons" type="Panel" parent="CanvasLayer/Control/PanelContainer"]
-visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
@@ -267,16 +269,88 @@ text = "Select a theme"
 layout_mode = 2
 text = "Clashy"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 164.0
+offset_right = 332.0
+offset_bottom = 454.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/Panel"]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -156.0
-offset_top = -73.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/normal_font_size = 32
-text = "Wadlo.cc"
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level Complete!"
+horizontal_alignment = 1
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelEmbedded"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 2
+text = "Score: 9,000"
+horizontal_alignment = 1
+
+[node name="Panel4" type="PanelContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelEmbedded"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+text = "Your Reward"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_iuwhk")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "500"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_6h4kp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "500"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"SuccessButton"
+text = "Next Level"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
