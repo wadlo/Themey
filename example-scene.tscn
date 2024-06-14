@@ -1,13 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://qxg03et7qjqr"]
+[gd_scene load_steps=10 format=3 uid="uid://qxg03et7qjqr"]
 
 [ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://themes/clashy/clashy.tres" id="1_g367q"]
 [ext_resource type="Texture2D" uid="uid://cxlcmxh70utbx" path="res://themes/clashy/graphics/background.png" id="2_s3qpa"]
 [ext_resource type="Texture2D" uid="uid://mta7kf22opvb" path="res://themes/clashy/graphics/black-fade-outline.svg" id="3_f6ykc"]
 [ext_resource type="Texture2D" uid="uid://d1x5oc5fssc3w" path="res://example_scene/graphics/upward_fade.svg" id="4_b4ixp"]
 [ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://themes/clashy/graphics/coin.svg" id="5_iuwhk"]
+[ext_resource type="Texture2D" uid="uid://dfrlphhq6fl55" path="res://themes/clashy/graphics/ribbon.svg" id="5_vo5ou"]
 [ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://themes/clashy/graphics/gem.svg" id="6_6h4kp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mpbc6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p3wvp"]
+content_margin_left = 0.0
+content_margin_top = 13.0
+content_margin_right = 0.0
+content_margin_bottom = 34.0
+texture = ExtResource("5_vo5ou")
+texture_margin_left = 85.0
+texture_margin_top = 19.0
+texture_margin_right = 85.0
+texture_margin_bottom = 67.0
+expand_margin_left = 55.0
+expand_margin_top = 5.0
+expand_margin_right = 55.0
+expand_margin_bottom = 33.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -274,7 +290,7 @@ layout_mode = 0
 offset_left = 72.0
 offset_top = 164.0
 offset_right = 332.0
-offset_bottom = 454.0
+offset_bottom = 537.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/Panel"]
 layout_mode = 1
@@ -287,10 +303,36 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
+[node name="Ribbon2" type="PanelContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
+z_index = 1
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_p3wvp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Ribbon2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Level Complete!"
 horizontal_alignment = 1
+
+[node name="Stars" type="HBoxContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Ribbon2/Label"]
+z_index = 1
+layout_mode = 2
+offset_top = -52.0
+offset_right = 228.0
+offset_bottom = -21.0
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
+layout_mode = 2
+texture = ExtResource("6_6h4kp")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
+layout_mode = 2
+texture = ExtResource("6_6h4kp")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
+layout_mode = 2
+texture = ExtResource("6_6h4kp")
 
 [node name="Panel" type="PanelContainer" parent="CanvasLayer/Control/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
