@@ -1,17 +1,14 @@
-[gd_resource type="Theme" load_steps=39 format=3 uid="uid://c42r8558dvmyi"]
+[gd_resource type="Theme" load_steps=42 format=3 uid="uid://c42r8558dvmyi"]
 
 [ext_resource type="Texture2D" uid="uid://cijnbspbn0k6c" path="res://themes/clashy/graphics/button-disabled.svg" id="1_2vevx"]
-[ext_resource type="StyleBox" uid="uid://q222orvy57pf" path="res://themes/clashy/clashButtonHover.tres" id="1_3ic4g"]
-[ext_resource type="StyleBox" uid="uid://byx3e5blcxm1o" path="res://themes/clashy/clashButton.tres" id="1_kpcyw"]
+[ext_resource type="StyleBox" uid="uid://q222orvy57pf" path="res://themes/clashy/panels/clashButtonHover.tres" id="2_0hton"]
 [ext_resource type="FontFile" uid="uid://qq52okilox71" path="res://themes/clashy/Acme-Regular.ttf" id="2_1eokn"]
-[ext_resource type="StyleBox" uid="uid://cxo32m6uciudf" path="res://themes/clashy/clashButtonPress.tres" id="3_dm7vf"]
 [ext_resource type="Texture2D" uid="uid://dnnvgg848rp73" path="res://themes/clashy/graphics/panel.svg" id="3_i7pvi"]
-[ext_resource type="StyleBox" uid="uid://2snm3okweqpc" path="res://themes/clashy/dangerClashButtonHover.tres" id="4_5o5bk"]
+[ext_resource type="StyleBox" uid="uid://byx3e5blcxm1o" path="res://themes/clashy/panels/clashButton.tres" id="3_ih65r"]
+[ext_resource type="StyleBox" uid="uid://cxo32m6uciudf" path="res://themes/clashy/panels/clashButtonPress.tres" id="4_i7no0"]
 [ext_resource type="Texture2D" uid="uid://bdgaxjqjqj1u6" path="res://themes/clashy/graphics/check-box-checked.svg" id="5_6wiy0"]
-[ext_resource type="StyleBox" uid="uid://cs4adpd6rj16" path="res://themes/clashy/dangerClashButton.tres" id="5_7gjrq"]
 [ext_resource type="Texture2D" uid="uid://bmfe5aahi3ufm" path="res://themes/clashy/graphics/check-button-checked.svg" id="5_hphe1"]
 [ext_resource type="Texture2D" uid="uid://bqbfn1sgkdsmu" path="res://themes/clashy/graphics/check-box-unchecked.svg" id="6_idcmf"]
-[ext_resource type="StyleBox" uid="uid://8aoy2hfwk68y" path="res://themes/clashy/dangerClashButtonPress.tres" id="6_n2fyu"]
 [ext_resource type="Texture2D" uid="uid://qly80th6h30" path="res://themes/clashy/graphics/check-button-checked-disabled.svg" id="6_ok2ad"]
 [ext_resource type="Texture2D" uid="uid://bus1kwh043ym" path="res://themes/clashy/graphics/check-button-inverted-checked.svg" id="6_ssvyy"]
 [ext_resource type="Texture2D" uid="uid://ckibkwolnudf6" path="res://themes/clashy/graphics/check-box-disabled-checked.svg" id="6_tu65u"]
@@ -19,13 +16,19 @@
 [ext_resource type="Texture2D" uid="uid://b0vpdub1akiut" path="res://themes/clashy/graphics/check-button-unchecked-disabled.svg" id="7_q7cem"]
 [ext_resource type="Texture2D" uid="uid://d1mgec37wuogs" path="res://themes/clashy/graphics/check-box-disabled-unchecked.svg" id="8_owihx"]
 [ext_resource type="Texture2D" uid="uid://ctwjroqh0fgvc" path="res://themes/clashy/graphics/check-button-inverted-unchecked.svg" id="8_rjgvj"]
-[ext_resource type="StyleBox" uid="uid://ijcks3fe2cy1" path="res://themes/clashy/successClashButtonHover.tres" id="9_pvlrv"]
-[ext_resource type="StyleBox" uid="uid://b3bs0xywspv6c" path="res://themes/clashy/successClashButton.tres" id="10_qu876"]
-[ext_resource type="StyleBox" uid="uid://7gnfvusfrfqy" path="res://themes/clashy/successClashButtonPress.tres" id="11_17f1f"]
-[ext_resource type="StyleBox" uid="uid://dw36xxux8vsh7" path="res://themes/clashy/panel_dark.tres" id="19_5lore"]
-[ext_resource type="StyleBox" uid="uid://t88jwvb7s6t5" path="res://themes/clashy/panel_dark_embedded.tres" id="20_dco20"]
-[ext_resource type="StyleBox" uid="uid://bvxyf0wxqh33m" path="res://themes/clashy/panel_light.tres" id="20_ifjm7"]
-[ext_resource type="StyleBox" uid="uid://dckahvecau5rs" path="res://themes/clashy/panel_light_embedded.tres" id="22_q1gtm"]
+[ext_resource type="StyleBox" uid="uid://2snm3okweqpc" path="res://themes/clashy/panels/dangerClashButtonHover.tres" id="15_iitqk"]
+[ext_resource type="StyleBox" uid="uid://cs4adpd6rj16" path="res://themes/clashy/panels/dangerClashButton.tres" id="16_lyg6y"]
+[ext_resource type="StyleBox" uid="uid://8aoy2hfwk68y" path="res://themes/clashy/panels/dangerClashButtonPress.tres" id="17_2jklr"]
+[ext_resource type="StyleBox" uid="uid://dewga67neikey" path="res://themes/clashy/panels/clashGreenButtonHovered.tres" id="18_5k5bw"]
+[ext_resource type="StyleBox" uid="uid://dsq41wy5jywes" path="res://themes/clashy/panels/clashGreenButton.tres" id="19_bp2cy"]
+[ext_resource type="StyleBox" uid="uid://cr8yu214v4imm" path="res://themes/clashy/panels/clashGreenButtonPressed.tres" id="20_7xukr"]
+[ext_resource type="StyleBox" uid="uid://dw36xxux8vsh7" path="res://themes/clashy/panels/panel_dark.tres" id="22_y4gfm"]
+[ext_resource type="StyleBox" uid="uid://t88jwvb7s6t5" path="res://themes/clashy/panels/panel_dark_embedded.tres" id="23_1ivug"]
+[ext_resource type="StyleBox" uid="uid://dckahvecau5rs" path="res://themes/clashy/panels/panel_light_embedded.tres" id="24_qau7n"]
+[ext_resource type="StyleBox" uid="uid://bvxyf0wxqh33m" path="res://themes/clashy/panels/panel_light.tres" id="25_ihi0n"]
+[ext_resource type="StyleBox" uid="uid://ijcks3fe2cy1" path="res://themes/clashy/panels/successClashButtonHover.tres" id="26_1nonf"]
+[ext_resource type="StyleBox" uid="uid://b3bs0xywspv6c" path="res://themes/clashy/panels/successClashButton.tres" id="27_0wob6"]
+[ext_resource type="StyleBox" uid="uid://7gnfvusfrfqy" path="res://themes/clashy/panels/successClashButtonPress.tres" id="28_x27uw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2rwg"]
 texture = ExtResource("1_2vevx")
@@ -68,9 +71,9 @@ default_font_size = 20
 Button/colors/font_outline_color = Color(0.162066, 0.162066, 0.162066, 1)
 Button/constants/outline_size = 6
 Button/styles/disabled = SubResource("StyleBoxTexture_o2rwg")
-Button/styles/hover = ExtResource("1_3ic4g")
-Button/styles/normal = ExtResource("1_kpcyw")
-Button/styles/pressed = ExtResource("3_dm7vf")
+Button/styles/hover = ExtResource("2_0hton")
+Button/styles/normal = ExtResource("3_ih65r")
+Button/styles/pressed = ExtResource("4_i7no0")
 CheckBox/icons/checked = ExtResource("5_6wiy0")
 CheckBox/icons/checked_disabled = ExtResource("6_tu65u")
 CheckBox/icons/unchecked = ExtResource("6_idcmf")
@@ -94,9 +97,13 @@ CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_0nqqg")
 CheckButton/styles/normal = SubResource("StyleBoxEmpty_urvln")
 CheckButton/styles/pressed = SubResource("StyleBoxEmpty_fpjl1")
 DangerButton/base_type = &"Button"
-DangerButton/styles/hover = ExtResource("4_5o5bk")
-DangerButton/styles/normal = ExtResource("5_7gjrq")
-DangerButton/styles/pressed = ExtResource("6_n2fyu")
+DangerButton/styles/hover = ExtResource("15_iitqk")
+DangerButton/styles/normal = ExtResource("16_lyg6y")
+DangerButton/styles/pressed = ExtResource("17_2jklr")
+GreenButton/base_type = &"Button"
+GreenButton/styles/hover = ExtResource("18_5k5bw")
+GreenButton/styles/normal = ExtResource("19_bp2cy")
+GreenButton/styles/pressed = ExtResource("20_7xukr")
 HBoxContainer/constants/separation = 8
 Label/colors/font_outline_color = Color(0.262932, 0.262932, 0.262932, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -110,24 +117,24 @@ MarginContainer/constants/margin_bottom = 16
 MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 16
 MarginContainer/constants/margin_top = 16
-Panel/styles/panel = ExtResource("19_5lore")
-PanelContainer/styles/panel = ExtResource("19_5lore")
+Panel/styles/panel = ExtResource("22_y4gfm")
+PanelContainer/styles/panel = ExtResource("22_y4gfm")
 PanelContainerEmbedded/base_type = &"PanelContainer"
-PanelContainerEmbedded/styles/panel = ExtResource("20_dco20")
+PanelContainerEmbedded/styles/panel = ExtResource("23_1ivug")
 PanelContainerEmbeddedLight/base_type = &"PanelContainer"
-PanelContainerEmbeddedLight/styles/panel = ExtResource("22_q1gtm")
+PanelContainerEmbeddedLight/styles/panel = ExtResource("24_qau7n")
 PanelContainerLight/base_type = &"PanelContainer"
-PanelContainerLight/styles/panel = ExtResource("20_ifjm7")
+PanelContainerLight/styles/panel = ExtResource("25_ihi0n")
 PanelEmbedded/base_type = &"Panel"
-PanelEmbedded/styles/panel = ExtResource("20_dco20")
+PanelEmbedded/styles/panel = ExtResource("23_1ivug")
 PanelLight/base_type = &"Panel"
-PanelLight/styles/panel = ExtResource("20_ifjm7")
+PanelLight/styles/panel = ExtResource("25_ihi0n")
 PanelLightEmbedded/base_type = &"Panel"
-PanelLightEmbedded/styles/panel = ExtResource("22_q1gtm")
+PanelLightEmbedded/styles/panel = ExtResource("24_qau7n")
 SuccessButton/base_type = &"Button"
-SuccessButton/styles/hover = ExtResource("9_pvlrv")
-SuccessButton/styles/normal = ExtResource("10_qu876")
-SuccessButton/styles/pressed = ExtResource("11_17f1f")
-TabContainer/styles/panel = ExtResource("20_dco20")
+SuccessButton/styles/hover = ExtResource("26_1nonf")
+SuccessButton/styles/normal = ExtResource("27_0wob6")
+SuccessButton/styles/pressed = ExtResource("28_x27uw")
+TabContainer/styles/panel = ExtResource("23_1ivug")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_ml68f")
 VBoxContainer/constants/separation = 8

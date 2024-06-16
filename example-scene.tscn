@@ -10,8 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bpw3fchq5i8qn" path="res://themes/clashy/graphics/star.png" id="6_mxe0x"]
 [ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://material/24px/replay-24.svg" id="9_36yko"]
 [ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://material/24px/home-24.svg" id="10_fw3vx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mpbc6"]
+[ext_resource type="Texture2D" uid="uid://do4hufkv622mx" path="res://example_scene/graphics/GamedevWizardsDiscordIcon.png" id="11_ws21d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p3wvp"]
 content_margin_left = 0.0
@@ -71,224 +70,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_b4ixp")
 
-[node name="CenteredContent" type="Control" parent="CanvasLayer/Control"]
-custom_minimum_size = Vector2(1152, 648)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="TabContainer" parent="CanvasLayer/Control/CenteredContent"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -544.0
-offset_top = -293.0
-offset_right = -78.0
-offset_bottom = 151.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mpbc6")
-current_tab = 1
-clip_tabs = false
-
-[node name="Showcase" type="Panel" parent="CanvasLayer/Control/CenteredContent/PanelContainer"]
-visible = false
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="CloseButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -51.0
-offset_top = 21.0
-offset_right = -19.0
-offset_bottom = 52.0
-grow_horizontal = 0
-theme_type_variation = &"DangerButton"
-
-[node name="Showcase" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -85.5
-offset_top = -143.5
-offset_right = 85.5
-offset_bottom = 143.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-text = "Label"
-
-[node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-text = "Check Button"
-
-[node name="DisabledCheckButton" type="CheckButton" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-disabled = true
-text = "Check Button 2"
-
-[node name="CheckBox" type="CheckBox" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-text = "Checkbox"
-
-[node name="DisabledCheckBox" type="CheckBox" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-disabled = true
-text = "Checkbox"
-
-[node name="Button" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-text = "Button"
-
-[node name="ToggleButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Showcase/Showcase"]
-layout_mode = 2
-theme_type_variation = &"DangerButton"
-toggle_mode = true
-text = "Danger Toggle"
-
-[node name="Buttons" type="Panel" parent="CanvasLayer/Control/CenteredContent/PanelContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="CloseButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -51.0
-offset_top = 21.0
-offset_right = -19.0
-offset_bottom = 52.0
-grow_horizontal = 0
-theme_type_variation = &"DangerButton"
-
-[node name="Buttons" type="GridContainer" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 3
-
-[node name="Control" type="Control" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-
-[node name="NormalLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Normal"
-
-[node name="ToggleLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Toggle"
-
-[node name="DefaultLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Default"
-
-[node name="DefaultButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Button"
-
-[node name="DefaultToggle" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-toggle_mode = true
-button_pressed = true
-text = "Toggle"
-
-[node name="FlatLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Flat"
-
-[node name="FlatButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-theme_type_variation = &"FlatButton"
-text = "Button"
-flat = true
-
-[node name="FlatToggle" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-theme_type_variation = &"FlatButton"
-toggle_mode = true
-button_pressed = true
-text = "Toggle"
-flat = true
-
-[node name="DisabledLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Disabled"
-
-[node name="DisabledButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-disabled = true
-text = "Button"
-
-[node name="DisabledToggle" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-disabled = true
-toggle_mode = true
-button_pressed = true
-text = "Toggle"
-
-[node name="SuccessLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Success"
-
-[node name="SuccessButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-theme_type_variation = &"SuccessButton"
-text = "Button"
-
-[node name="SuccessToggle" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-theme_type_variation = &"SuccessButton"
-toggle_mode = true
-button_pressed = true
-text = "Toggle"
-
-[node name="DangerLabel" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-text = "Danger"
-
-[node name="DangerButton" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-theme_type_variation = &"DangerButton"
-text = "Button"
-
-[node name="DangerToggle" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Buttons/Buttons"]
-layout_mode = 2
-theme_type_variation = &"DangerButton"
-toggle_mode = true
-button_pressed = true
-text = "Toggle"
-
-[node name="Themes" type="Panel" parent="CanvasLayer/Control/CenteredContent/PanelContainer"]
-visible = false
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="Themes" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Themes"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -296,23 +78,40 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Themes/Themes"]
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer"]
 layout_mode = 2
-text = "Select a theme"
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/CenteredContent/PanelContainer/Themes/Themes"]
-layout_mode = 2
-text = "Clashy"
+[node name="CenteredContent" type="Control" parent="CanvasLayer/Control/MarginContainer/Control"]
+custom_minimum_size = Vector2(1120, 616)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -308.0
+offset_right = 560.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="LevelCompletePanel" type="Panel" parent="CanvasLayer/Control/CenteredContent"]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 165.0
-offset_right = 297.0
-offset_bottom = 502.0
+[node name="LevelCompletePanel" type="Panel" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -167.0
+offset_right = 130.0
+offset_bottom = 167.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_type_variation = &"PanelLight"
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -320,273 +119,144 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer"]
 layout_mode = 2
 
-[node name="Ribbon2" type="PanelContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
+[node name="Ribbon2" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 z_index = 1
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_p3wvp")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Level Complete!"
 horizontal_alignment = 1
 
-[node name="Stars" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
-z_index = 1
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -114.0
-offset_top = -55.5
-offset_right = 114.0
-offset_bottom = -12.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -69.0
+offset_right = -30.0
+offset_bottom = -26.0
 grow_horizontal = 2
-theme_override_constants/separation = 2
-alignment = 1
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
-layout_mode = 2
+grow_vertical = 2
+rotation = -0.174533
 texture = ExtResource("6_mxe0x")
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
-layout_mode = 2
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -84.0
+offset_right = 18.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("6_mxe0x")
 
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
 layout_mode = 2
+offset_left = 154.5
+offset_top = -61.0
+offset_right = 198.5
+offset_bottom = -18.0
+rotation = 0.174533
 texture = ExtResource("6_mxe0x")
 
-[node name="Panel" type="PanelContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"PanelLightEmbedded"
 
-[node name="Label2" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel"]
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel"]
 layout_mode = 2
 text = "Score: 9,000"
 horizontal_alignment = 1
 
-[node name="Panel4" type="PanelContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
+[node name="Panel4" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"PanelLightEmbedded"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
 layout_mode = 2
 text = "Your Reward"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("5_iuwhk")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "500"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
 texture = ExtResource("6_6h4kp")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "500"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("9_36yko")
 
-[node name="Button2" type="Button" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"SuccessButton"
+theme_type_variation = &"GreenButton"
 text = "Next Level"
 
-[node name="Button3" type="Button" parent="CanvasLayer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button3" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("10_fw3vx")
 
-[node name="LevelSelectPanel" type="Panel" parent="CanvasLayer/Control/CenteredContent"]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 165.0
-offset_right = 820.0
-offset_bottom = 552.0
-theme_type_variation = &"PanelLight"
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel"]
+[node name="DiscordLink" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -186.0
+offset_top = -61.0
+grow_horizontal = 0
+grow_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer"]
+[node name="JoinTheDiscord" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/DiscordLink"]
 layout_mode = 2
+text = "Join our Discord"
+horizontal_alignment = 2
 
-[node name="Ribbon2" type="PanelContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer"]
-z_index = 1
+[node name="DiscordLink" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/DiscordLink"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_p3wvp")
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Ribbon2"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Select a Level"
-horizontal_alignment = 1
-
-[node name="Stars" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
-z_index = 1
-layout_mode = 2
-offset_top = -52.0
-offset_right = 228.0
-offset_bottom = -21.0
-theme_override_constants/separation = 2
-alignment = 1
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
-layout_mode = 2
-texture = ExtResource("6_mxe0x")
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
-layout_mode = 2
-texture = ExtResource("6_mxe0x")
-
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Ribbon2/Label/Stars"]
-layout_mode = 2
-texture = ExtResource("6_mxe0x")
-
-[node name="Panel" type="PanelContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_type_variation = &"PanelLightEmbedded"
-
-[node name="Label2" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel"]
-layout_mode = 2
-text = "Score: 9,000"
-horizontal_alignment = 1
-
-[node name="Panel4" type="PanelContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_type_variation = &"PanelLightEmbedded"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
-layout_mode = 2
-text = "Your Reward"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("5_iuwhk")
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "500"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("6_6h4kp")
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
-layout_mode = 2
-text = "500"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Button" type="Button" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-icon = ExtResource("9_36yko")
-
-[node name="Button2" type="Button" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_type_variation = &"SuccessButton"
-text = "Next Level"
-
-[node name="Button3" type="Button" parent="CanvasLayer/Control/CenteredContent/LevelSelectPanel/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-icon = ExtResource("10_fw3vx")
-
-[node name="Panel" type="Panel" parent="CanvasLayer/Control/CenteredContent"]
-layout_mode = 1
-offset_left = 39.0
-offset_top = 31.0
-offset_right = 302.0
-offset_bottom = 96.0
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/CenteredContent/Panel"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -37.5
-offset_right = 168.0
-offset_bottom = 37.5
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("6_6h4kp")
-stretch_mode = 5
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = -2
-
-[node name="ProfileName" type="Label" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "ProfileName"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "lv12"
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control/CenteredContent/Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(76.73, 8)
-layout_mode = 2
-size_flags_vertical = 4
-value = 49.51
-show_percentage = false
+texture = ExtResource("11_ws21d")
+stretch_mode = 4
