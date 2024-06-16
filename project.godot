@@ -15,11 +15,6 @@ run/main_scene="res://example-scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
-[display]
-
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
-
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.0926717, 0.196049, 0.331468, 1)
