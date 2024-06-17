@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://qxg03et7qjqr"]
+[gd_scene load_steps=15 format=3 uid="uid://qxg03et7qjqr"]
 
 [ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://themes/clashy/clashy.tres" id="1_g367q"]
 [ext_resource type="Texture2D" uid="uid://cxlcmxh70utbx" path="res://themes/clashy/graphics/background.png" id="2_s3qpa"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bpw3fchq5i8qn" path="res://themes/clashy/graphics/star.png" id="6_mxe0x"]
 [ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://material/24px/replay-24.svg" id="9_36yko"]
 [ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://material/24px/home-24.svg" id="10_fw3vx"]
+[ext_resource type="Texture2D" uid="uid://cbrtrwinhljbr" path="res://material/GamedevWizardsDiscordIcon.png" id="11_rr6t5"]
 [ext_resource type="Texture2D" uid="uid://do4hufkv622mx" path="res://example_scene/graphics/GamedevWizardsDiscordIcon.png" id="11_ws21d"]
+[ext_resource type="Script" path="res://example_scene/DiscordButton.gd" id="12_jyb2d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p3wvp"]
 content_margin_left = 0.0
@@ -256,7 +258,11 @@ layout_mode = 2
 text = "Join our Discord"
 horizontal_alignment = 2
 
-[node name="DiscordLink" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/DiscordLink"]
+[node name="DiscordLink" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Control/DiscordLink"]
 layout_mode = 2
-texture = ExtResource("11_ws21d")
-stretch_mode = 4
+texture_normal = ExtResource("11_rr6t5")
+texture_pressed = ExtResource("11_ws21d")
+texture_hover = ExtResource("11_ws21d")
+texture_disabled = ExtResource("11_ws21d")
+stretch_mode = 5
+script = ExtResource("12_jyb2d")
