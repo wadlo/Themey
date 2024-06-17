@@ -1,0 +1,52 @@
+# Workflow to publish Godot HTML5 games to GitHub Pages
+#
+# Make sure your project is configured for Web export to the path `builds/web`.
+
+name: "Publish to GitHub Pages"
+
+env:
+   GODOT_VERSION: 4.2.2 # Remember to manually set image to this version below.
+
+on:
+   workflow_dispatch:
+   push:
+      branches:
+         - master
+
+jobs:
+   deploy:
+      runs-on: ubuntu-latest
+      permissions:
+         contents: write
+
+      container:
+         image: barichello/godot-ci:4.2.2
+
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v4
+
+         - name: Move HTML5 templates into position
+           run: |
+              mkdir -v -p ~/.local/share/godot/export_templates
+              mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+         - name: Create staging directory
+           run: mkdir -v -p builds/web
+
+         - name: Build
+           run: godot -v --export-release --headless "Web" ../builds/web/index.html src/project.godot
+
+         - name: Add coi-service-worker
+           run: |
+              git clone https://github.com/gzuidhof/coi-serviceworker.git
+              mv coi-serviceworker/coi-serviceworker.js builds/web/coi-serviceworker.js
+              sed -i '3 i <script src="coi-serviceworker.js"></script>' builds/web/index.html
+         - name: Deploy
+           uses: peaceiris/actions-gh-pages@v3.9.3
+           with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./builds/web
+              force_orphan: true
+              user_name: "github-ci[bot]"
+              user_email: "github-actions[bot]@users.noreply.github.com"
+              commit_message: "Publish to gh-pages"
