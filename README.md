@@ -19,9 +19,9 @@ Example: res:/themes/clashy
 # License
 ### Graphics
 
-Graphics inside "src/material" are licensed with the attached Apache 2.0 and available in full source from the material icons library.
+All graphics, except for those inside `src/material` are licensed under the attached CC-0 license.
 
-All other graphics are licensed under the attached CC-0 GraphicsLicense.
+Graphics inside "src/material" are licensed with the attached Apache 2.0 and available in full source from the material icons library.
 
 ### Code and other game files
 All code and non-image files are licensed under the attached MIT license.
