@@ -1,32 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://qxg03et7qjqr"]
+[gd_scene load_steps=15 format=3 uid="uid://qxg03et7qjqr"]
 
+[ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://themes/sci-fy/scify.tres" id="1_fvwfn"]
 [ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://themes/clashy/clashy.tres" id="1_g367q"]
 [ext_resource type="Texture2D" uid="uid://cxlcmxh70utbx" path="res://themes/clashy/graphics/background.png" id="2_s3qpa"]
 [ext_resource type="Texture2D" uid="uid://mta7kf22opvb" path="res://themes/clashy/graphics/black-fade-outline.svg" id="3_f6ykc"]
+[ext_resource type="Texture2D" uid="uid://c3i25ec4oxqvp" path="res://pixabay/milky_way_1280.jpg" id="3_pvjp8"]
 [ext_resource type="Texture2D" uid="uid://d1x5oc5fssc3w" path="res://example_scene/graphics/upward_fade.svg" id="4_b4ixp"]
-[ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://themes/clashy/graphics/coin.svg" id="5_iuwhk"]
-[ext_resource type="Texture2D" uid="uid://dt73dtm5ex5jd" path="res://themes/clashy/graphics/ribbon.png" id="5_qs8g8"]
-[ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://themes/clashy/graphics/gem.svg" id="6_6h4kp"]
-[ext_resource type="Texture2D" uid="uid://bpw3fchq5i8qn" path="res://themes/clashy/graphics/star.png" id="6_mxe0x"]
+[ext_resource type="Texture2D" uid="uid://dq0smbif3q47c" path="res://themes/sci-fy/graphics/star.png" id="6_ge4ss"]
+[ext_resource type="Texture2D" uid="uid://clt3dotkggvf0" path="res://themes/sci-fy/graphics/coin.png" id="7_b6i3y"]
+[ext_resource type="Texture2D" uid="uid://cdcbxc25e1tou" path="res://themes/sci-fy/graphics/gem.png" id="8_wag8j"]
 [ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://material/24px/replay-24.svg" id="9_36yko"]
 [ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://material/24px/home-24.svg" id="10_fw3vx"]
 [ext_resource type="Texture2D" uid="uid://do4hufkv622mx" path="res://example_scene/graphics/GamedevWizardsDiscordIcon.png" id="11_ws21d"]
 [ext_resource type="Script" path="res://example_scene/DiscordButton.gd" id="12_jyb2d"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p3wvp"]
-content_margin_left = 0.0
-content_margin_top = 13.0
-content_margin_right = 0.0
-content_margin_bottom = 34.0
-texture = ExtResource("5_qs8g8")
-texture_margin_left = 85.0
-texture_margin_top = 19.0
-texture_margin_right = 85.0
-texture_margin_bottom = 67.0
-expand_margin_left = 55.0
-expand_margin_top = 5.0
-expand_margin_right = 55.0
-expand_margin_bottom = 33.0
+[ext_resource type="Script" path="res://ChangeThemeButton.gd" id="13_s6pkg"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -39,9 +26,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_g367q")
+theme = ExtResource("1_fvwfn")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+[node name="TiledBackground" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +38,19 @@ grow_vertical = 2
 texture = ExtResource("2_s3qpa")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
+[node name="FullImage" type="TextureRect" parent="CanvasLayer/Control/TiledBackground"]
+modulate = Color(1, 0.639216, 0.623529, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pvjp8")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/TiledBackground"]
 modulate = Color(1, 1, 1, 0.133333)
 layout_mode = 1
 anchors_preset = 15
@@ -61,7 +60,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_f6ykc")
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/TextureRect"]
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/TiledBackground"]
 modulate = Color(0.158124, 0.444043, 0.729523, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -78,6 +77,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer"]
 layout_mode = 2
@@ -96,29 +99,24 @@ offset_right = 560.0
 offset_bottom = 308.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_group_ = true
 
-[node name="LevelCompletePanel" type="Panel" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent"]
+[node name="LevelCompletePanel" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -167.0
-offset_right = 130.0
-offset_bottom = 167.0
+offset_left = -127.0
+offset_top = -104.0
+offset_right = 127.0
+offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_type_variation = &"PanelLight"
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer"]
 layout_mode = 2
@@ -126,15 +124,26 @@ layout_mode = 2
 [node name="Ribbon2" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 z_index = 1
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_p3wvp")
+theme_type_variation = &"Panel_Ribbon"
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Level Complete!"
+theme_type_variation = &"Label_Title"
+text = "LEVEL COMPLETE"
 horizontal_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
+[node name="SpreadStars" type="Control" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/SpreadStars"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -148,9 +157,10 @@ offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.174533
-texture = ExtResource("6_mxe0x")
+texture = ExtResource("6_ge4ss")
+stretch_mode = 6
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/SpreadStars"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -164,20 +174,54 @@ offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("6_mxe0x")
+texture = ExtResource("6_ge4ss")
 
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
-layout_mode = 2
-offset_left = 154.5
-offset_top = -61.0
-offset_right = 198.5
-offset_bottom = -18.0
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/SpreadStars"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 31.0
+offset_top = -77.0
+offset_right = 75.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
 rotation = 0.174533
-texture = ExtResource("6_mxe0x")
+texture = ExtResource("6_ge4ss")
+
+[node name="UniformStars" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -54.5
+offset_right = 46.0
+offset_bottom = -31.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/UniformStars"]
+layout_mode = 2
+texture = ExtResource("6_ge4ss")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/UniformStars"]
+layout_mode = 2
+texture = ExtResource("6_ge4ss")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/UniformStars"]
+layout_mode = 2
+texture = ExtResource("6_ge4ss")
 
 [node name="Panel" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"PanelLightEmbedded"
+theme_type_variation = &"PanelEmbedded"
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel"]
 layout_mode = 2
@@ -186,7 +230,7 @@ horizontal_alignment = 1
 
 [node name="Panel4" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"PanelLightEmbedded"
+theme_type_variation = &"PanelEmbedded"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4"]
 layout_mode = 2
@@ -206,7 +250,8 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("5_iuwhk")
+texture = ExtResource("7_b6i3y")
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -217,7 +262,8 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("6_6h4kp")
+texture = ExtResource("8_wag8j")
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -233,7 +279,7 @@ icon = ExtResource("9_36yko")
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"GreenButton"
+theme_type_variation = &"Button_Success"
 text = "Next Level"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -265,3 +311,33 @@ texture_hover = ExtResource("11_ws21d")
 texture_disabled = ExtResource("11_ws21d")
 stretch_mode = 5
 script = ExtResource("12_jyb2d")
+
+[node name="RightContent" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ClashyButton" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/RightContent" node_paths=PackedStringArray("rootNode", "fullBackgroundNode")]
+layout_mode = 2
+theme = ExtResource("1_g367q")
+text = "Clashy"
+script = ExtResource("13_s6pkg")
+rootNode = NodePath("../../../..")
+fullBackgroundNode = NodePath("../../../../TiledBackground/FullImage")
+
+[node name="SpaceyButton" type="Button" parent="CanvasLayer/Control/MarginContainer/Control/RightContent" node_paths=PackedStringArray("rootNode", "fullBackgroundNode")]
+layout_mode = 2
+theme = ExtResource("1_fvwfn")
+text = "Spacey"
+script = ExtResource("13_s6pkg")
+rootNode = NodePath("../../../..")
+fullBackgroundTexture = ExtResource("3_pvjp8")
+fullBackgroundNode = NodePath("../../../../TiledBackground/FullImage")

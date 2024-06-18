@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=42 format=3 uid="uid://c42r8558dvmyi"]
+[gd_resource type="Theme" load_steps=43 format=3 uid="uid://c42r8558dvmyi"]
 
 [ext_resource type="Texture2D" uid="uid://cijnbspbn0k6c" path="res://themes/clashy/graphics/button-disabled.svg" id="1_2vevx"]
 [ext_resource type="StyleBox" uid="uid://q222orvy57pf" path="res://themes/clashy/panels/clashButtonHover.tres" id="2_0hton"]
@@ -27,6 +27,7 @@
 [ext_resource type="StyleBox" uid="uid://dckahvecau5rs" path="res://themes/clashy/panels/panel_light_embedded.tres" id="24_qau7n"]
 [ext_resource type="StyleBox" uid="uid://bvxyf0wxqh33m" path="res://themes/clashy/panels/panel_light.tres" id="25_ihi0n"]
 [ext_resource type="StyleBox" uid="uid://ijcks3fe2cy1" path="res://themes/clashy/panels/successClashButtonHover.tres" id="26_1nonf"]
+[ext_resource type="StyleBox" uid="uid://bw1fy6rgn16ft" path="res://themes/clashy/panels/clashy_ribbon.tres" id="26_iesbr"]
 [ext_resource type="StyleBox" uid="uid://b3bs0xywspv6c" path="res://themes/clashy/panels/successClashButton.tres" id="27_0wob6"]
 [ext_resource type="StyleBox" uid="uid://7gnfvusfrfqy" path="res://themes/clashy/panels/successClashButtonPress.tres" id="28_x27uw"]
 
@@ -74,6 +75,8 @@ Button/styles/disabled = SubResource("StyleBoxTexture_o2rwg")
 Button/styles/hover = ExtResource("2_0hton")
 Button/styles/normal = ExtResource("3_ih65r")
 Button/styles/pressed = ExtResource("4_i7no0")
+Button_Success/base_type = &"Button"
+Button_Success/styles/normal = ExtResource("19_bp2cy")
 CheckBox/icons/checked = ExtResource("5_6wiy0")
 CheckBox/icons/checked_disabled = ExtResource("6_tu65u")
 CheckBox/icons/unchecked = ExtResource("6_idcmf")
@@ -113,11 +116,13 @@ Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 5
 Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("2_1eokn")
+Label_Title/base_type = &"Label"
+Label_Title/font_sizes/font_size = 24
 MarginContainer/constants/margin_bottom = 16
 MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 16
 MarginContainer/constants/margin_top = 16
-Panel/styles/panel = ExtResource("22_y4gfm")
+Panel/styles/panel = ExtResource("25_ihi0n")
 PanelContainer/styles/panel = ExtResource("22_y4gfm")
 PanelContainerEmbedded/base_type = &"PanelContainer"
 PanelContainerEmbedded/styles/panel = ExtResource("23_1ivug")
@@ -126,11 +131,13 @@ PanelContainerEmbeddedLight/styles/panel = ExtResource("24_qau7n")
 PanelContainerLight/base_type = &"PanelContainer"
 PanelContainerLight/styles/panel = ExtResource("25_ihi0n")
 PanelEmbedded/base_type = &"Panel"
-PanelEmbedded/styles/panel = ExtResource("23_1ivug")
+PanelEmbedded/styles/panel = ExtResource("24_qau7n")
 PanelLight/base_type = &"Panel"
 PanelLight/styles/panel = ExtResource("25_ihi0n")
 PanelLightEmbedded/base_type = &"Panel"
 PanelLightEmbedded/styles/panel = ExtResource("24_qau7n")
+Panel_Ribbon/base_type = &"Panel"
+Panel_Ribbon/styles/panel = ExtResource("26_iesbr")
 SuccessButton/base_type = &"Button"
 SuccessButton/styles/hover = ExtResource("26_1nonf")
 SuccessButton/styles/normal = ExtResource("27_0wob6")
