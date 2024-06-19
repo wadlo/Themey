@@ -8,6 +8,10 @@ Themey is A collection of open source themes for your Godot 4.x game. Each theme
 ## Clashy: 3d styled Vector UI
 ![image](https://github.com/wadlo/Themey/assets/86272030/fdf924c1-af79-4920-aa98-994d76f18a1e)
 
+## Spacey: Modern, simple, and clean UI with a slight sci-fi feel
+![image](https://github.com/wadlo/Themey/assets/86272030/9b122f21-6ea9-4b20-9d99-403419a0bbeb)
+
+
 ## Others
 Coming soon! If there's a styled UI you need, please reach out to the Discord. We're always looking for feedback and love meeting other devs.
 
