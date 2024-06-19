@@ -51,41 +51,26 @@ modulate = Color(0, 0, 0, 1)
 
 [node name="ConstantCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MarginContainer" type="MarginContainer" parent="ConstantCanvasLayer"]
-z_index = 100
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="Control" type="Control" parent="ConstantCanvasLayer/MarginContainer"]
-layout_mode = 2
-mouse_filter = 1
-
-[node name="DiscordLink" type="VBoxContainer" parent="ConstantCanvasLayer/MarginContainer/Control"]
-layout_mode = 1
+[node name="DiscordLink" type="VBoxContainer" parent="ConstantCanvasLayer"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -186.0
-offset_top = -61.0
+offset_left = -202.0
+offset_top = -77.0
+offset_right = -16.0
+offset_bottom = -16.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("3_coqfe")
 
-[node name="JoinTheDiscord" type="Label" parent="ConstantCanvasLayer/MarginContainer/Control/DiscordLink"]
+[node name="JoinTheDiscord" type="Label" parent="ConstantCanvasLayer/DiscordLink"]
 layout_mode = 2
 text = "Join our Discord"
 horizontal_alignment = 2
 
-[node name="DiscordLink" type="TextureButton" parent="ConstantCanvasLayer/MarginContainer/Control/DiscordLink"]
+[node name="DiscordLink" type="TextureButton" parent="ConstantCanvasLayer/DiscordLink"]
 layout_mode = 2
 texture_normal = ExtResource("4_igjyp")
 texture_pressed = ExtResource("4_igjyp")
@@ -94,32 +79,32 @@ texture_disabled = ExtResource("4_igjyp")
 stretch_mode = 5
 script = ExtResource("5_1g0lo")
 
-[node name="RightContent" type="VBoxContainer" parent="ConstantCanvasLayer/MarginContainer/Control"]
-layout_mode = 1
+[node name="RightContent" type="VBoxContainer" parent="ConstantCanvasLayer"]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -86.0
+offset_left = -102.0
 offset_top = -48.5
+offset_right = -16.0
 offset_bottom = 44.5
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="ClashyButton" type="Button" parent="ConstantCanvasLayer/MarginContainer/Control/RightContent" node_paths=PackedStringArray("themeCanvasLayer")]
+[node name="ClashyButton" type="Button" parent="ConstantCanvasLayer/RightContent" node_paths=PackedStringArray("themeCanvasLayer")]
 layout_mode = 2
 theme = ExtResource("2_sdgue")
 text = "Clashy"
 script = ExtResource("6_ekpiu")
-themeCanvasLayer = NodePath("../../../../../Themes/ClashyThemeCanvasLayer")
+themeCanvasLayer = NodePath("../../../Themes/ClashyThemeCanvasLayer")
 
-[node name="SpaceyButton" type="Button" parent="ConstantCanvasLayer/MarginContainer/Control/RightContent" node_paths=PackedStringArray("themeCanvasLayer")]
+[node name="SpaceyButton" type="Button" parent="ConstantCanvasLayer/RightContent" node_paths=PackedStringArray("themeCanvasLayer")]
 layout_mode = 2
 theme = ExtResource("3_coqfe")
 text = "Spacey"
 script = ExtResource("6_ekpiu")
-themeCanvasLayer = NodePath("../../../../../Themes/SpaceyThemeCanvasLayer2")
+themeCanvasLayer = NodePath("../../../Themes/SpaceyThemeCanvasLayer2")
 
 [editable path="Themes/ClashyThemeCanvasLayer"]
 [editable path="Themes/SpaceyThemeCanvasLayer2"]
