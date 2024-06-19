@@ -46,6 +46,9 @@ texture = ExtResource("5_f866t")
 [node name="SpaceyThemeCanvasLayer2" parent="Themes" instance=ExtResource("1_go163")]
 visible = false
 
+[node name="TextureRect2" parent="Themes/SpaceyThemeCanvasLayer2/Control/TiledBackground" index="2"]
+modulate = Color(0, 0, 0, 1)
+
 [node name="ConstantCanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MarginContainer" type="MarginContainer" parent="ConstantCanvasLayer"]
