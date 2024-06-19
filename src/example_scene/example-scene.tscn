@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=3 uid="uid://qxg03et7qjqr"]
+
+[ext_resource type="PackedScene" uid="uid://dudenb5lyf1ga" path="res://example_scene/theme_canvas_layer.tscn" id="1_go163"]
+[ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://themes/clashy/clashy.tres" id="2_sdgue"]
+[ext_resource type="Texture2D" uid="uid://bpw3fchq5i8qn" path="res://themes/clashy/graphics/star.png" id="3_2wa2v"]
+[ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://themes/spacey/spacey.tres" id="3_coqfe"]
+[ext_resource type="Texture2D" uid="uid://do4hufkv622mx" path="res://example_scene/graphics/GamedevWizardsDiscordIcon.png" id="4_igjyp"]
+[ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://themes/clashy/graphics/coin.svg" id="4_y5j5j"]
+[ext_resource type="Script" path="res://example_scene/DiscordButton.gd" id="5_1g0lo"]
+[ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://themes/clashy/graphics/gem.svg" id="5_f866t"]
+[ext_resource type="Script" path="res://example_scene/ChangeThemeButton.gd" id="6_ekpiu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Themes" type="Node" parent="."]
+
+[node name="ClashyThemeCanvasLayer" parent="Themes" instance=ExtResource("1_go163")]
+
+[node name="Control" parent="Themes/ClashyThemeCanvasLayer" index="0"]
+theme = ExtResource("2_sdgue")
+
+[node name="FullImage" parent="Themes/ClashyThemeCanvasLayer/Control/TiledBackground" index="0"]
+visible = false
+
+[node name="SpreadStars" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label" index="0"]
+visible = true
+
+[node name="TextureRect2" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/SpreadStars" index="0"]
+texture = ExtResource("3_2wa2v")
+
+[node name="TextureRect3" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/SpreadStars" index="1"]
+texture = ExtResource("3_2wa2v")
+
+[node name="TextureRect4" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label/SpreadStars" index="2"]
+texture = ExtResource("3_2wa2v")
+
+[node name="UniformStars" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Ribbon2/Label" index="1"]
+visible = false
+
+[node name="TextureRect" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer" index="0"]
+texture = ExtResource("4_y5j5j")
+
+[node name="TextureRect" parent="Themes/ClashyThemeCanvasLayer/Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2" index="0"]
+texture = ExtResource("5_f866t")
+
+[node name="SpaceyThemeCanvasLayer2" parent="Themes" instance=ExtResource("1_go163")]
+visible = false
+
+[node name="ConstantCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="ConstantCanvasLayer"]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Control" type="Control" parent="ConstantCanvasLayer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="DiscordLink" type="VBoxContainer" parent="ConstantCanvasLayer/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -61.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_coqfe")
+
+[node name="JoinTheDiscord" type="Label" parent="ConstantCanvasLayer/MarginContainer/Control/DiscordLink"]
+layout_mode = 2
+text = "Join our Discord"
+horizontal_alignment = 2
+
+[node name="DiscordLink" type="TextureButton" parent="ConstantCanvasLayer/MarginContainer/Control/DiscordLink"]
+layout_mode = 2
+texture_normal = ExtResource("4_igjyp")
+texture_pressed = ExtResource("4_igjyp")
+texture_hover = ExtResource("4_igjyp")
+texture_disabled = ExtResource("4_igjyp")
+stretch_mode = 5
+script = ExtResource("5_1g0lo")
+
+[node name="RightContent" type="VBoxContainer" parent="ConstantCanvasLayer/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -48.5
+offset_bottom = 44.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ClashyButton" type="Button" parent="ConstantCanvasLayer/MarginContainer/Control/RightContent" node_paths=PackedStringArray("themeCanvasLayer")]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_sdgue")
+text = "Clashy"
+script = ExtResource("6_ekpiu")
+themeCanvasLayer = NodePath("../../../../../Themes/ClashyThemeCanvasLayer")
+
+[node name="SpaceyButton" type="Button" parent="ConstantCanvasLayer/MarginContainer/Control/RightContent" node_paths=PackedStringArray("themeCanvasLayer")]
+layout_mode = 2
+theme = ExtResource("3_coqfe")
+text = "Spacey"
+script = ExtResource("6_ekpiu")
+themeCanvasLayer = NodePath("../../../../../Themes/SpaceyThemeCanvasLayer2")
+
+[editable path="Themes/ClashyThemeCanvasLayer"]
+[editable path="Themes/SpaceyThemeCanvasLayer2"]

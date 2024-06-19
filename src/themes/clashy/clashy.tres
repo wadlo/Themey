@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=43 format=3 uid="uid://c42r8558dvmyi"]
+[gd_resource type="Theme" load_steps=42 format=3 uid="uid://c42r8558dvmyi"]
 
 [ext_resource type="Texture2D" uid="uid://cijnbspbn0k6c" path="res://themes/clashy/graphics/button-disabled.svg" id="1_2vevx"]
 [ext_resource type="StyleBox" uid="uid://q222orvy57pf" path="res://themes/clashy/panels/clashButtonHover.tres" id="2_0hton"]
@@ -22,7 +22,6 @@
 [ext_resource type="StyleBox" uid="uid://dewga67neikey" path="res://themes/clashy/panels/clashGreenButtonHovered.tres" id="18_5k5bw"]
 [ext_resource type="StyleBox" uid="uid://dsq41wy5jywes" path="res://themes/clashy/panels/clashGreenButton.tres" id="19_bp2cy"]
 [ext_resource type="StyleBox" uid="uid://cr8yu214v4imm" path="res://themes/clashy/panels/clashGreenButtonPressed.tres" id="20_7xukr"]
-[ext_resource type="StyleBox" uid="uid://dw36xxux8vsh7" path="res://themes/clashy/panels/panel_dark.tres" id="22_y4gfm"]
 [ext_resource type="StyleBox" uid="uid://t88jwvb7s6t5" path="res://themes/clashy/panels/panel_dark_embedded.tres" id="23_1ivug"]
 [ext_resource type="StyleBox" uid="uid://dckahvecau5rs" path="res://themes/clashy/panels/panel_light_embedded.tres" id="24_qau7n"]
 [ext_resource type="StyleBox" uid="uid://bvxyf0wxqh33m" path="res://themes/clashy/panels/panel_light.tres" id="25_ihi0n"]
@@ -118,12 +117,12 @@ Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("2_1eokn")
 Label_Title/base_type = &"Label"
 Label_Title/font_sizes/font_size = 24
-MarginContainer/constants/margin_bottom = 16
-MarginContainer/constants/margin_left = 16
-MarginContainer/constants/margin_right = 16
-MarginContainer/constants/margin_top = 16
+MarginContainer/constants/margin_bottom = 12
+MarginContainer/constants/margin_left = 12
+MarginContainer/constants/margin_right = 12
+MarginContainer/constants/margin_top = 12
 Panel/styles/panel = ExtResource("25_ihi0n")
-PanelContainer/styles/panel = ExtResource("22_y4gfm")
+PanelContainer/styles/panel = ExtResource("25_ihi0n")
 PanelContainerEmbedded/base_type = &"PanelContainer"
 PanelContainerEmbedded/styles/panel = ExtResource("23_1ivug")
 PanelContainerEmbeddedLight/base_type = &"PanelContainer"

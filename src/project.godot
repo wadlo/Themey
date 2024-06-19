@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Themey"
-run/main_scene="res://example-scene.tscn"
+run/main_scene="res://example_scene/example-scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
