@@ -22,4 +22,5 @@ project/assembly_name="Themey"
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.0926717, 0.196049, 0.331468, 1)

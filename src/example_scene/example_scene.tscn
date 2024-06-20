@@ -15,6 +15,7 @@
 [node name="Themes" type="Node" parent="."]
 
 [node name="ClashyThemeCanvasLayer" parent="Themes" instance=ExtResource("1_e0alb")]
+visible = false
 
 [node name="Control" parent="Themes/ClashyThemeCanvasLayer" index="0"]
 theme = ExtResource("2_jw0fx")
@@ -44,7 +45,6 @@ texture = ExtResource("4_ph444")
 texture = ExtResource("5_5foqk")
 
 [node name="SpaceyThemeCanvasLayer2" parent="Themes" instance=ExtResource("1_e0alb")]
-visible = false
 
 [node name="TextureRect2" parent="Themes/SpaceyThemeCanvasLayer2/Control/TiledBackground" index="2"]
 modulate = Color(0, 0, 0, 1)
