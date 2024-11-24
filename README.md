@@ -13,7 +13,7 @@ Themey is A collection of open source themes for your Godot 4.x game. Each theme
 
 
 ## Others
-Coming soon! If there's a styled UI you need, please reach out to the Discord. We're always looking for feedback and love meeting other devs.
+Available upon request. If there's a styled UI you need, let us know either by creating an issue in Github or reaching out on Discord.
 
 # Setup
 Each theme folder includes a `.tres` file and all necessary images for you to use that theme. Don't forget when copying the files over to include the `themes` folder at the root of your Godot project so imports aren't messed up.

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://xqcyp1voips0"]
+
+[ext_resource type="Shader" path="res://addons/Themey/AdjustLightness.gdshader" id="1_ys5a3"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_ys5a3")
+shader_parameter/brightness_adjust = 4.75e-08

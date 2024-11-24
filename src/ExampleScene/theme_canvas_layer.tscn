@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dudenb5lyf1ga"]
+[gd_scene load_steps=12 format=3 uid="uid://dudenb5lyf1ga"]
 
 [ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://addons/Themey/themes/spacey/spacey.tres" id="1_jbpvj"]
 [ext_resource type="Texture2D" uid="uid://cxlcmxh70utbx" path="res://addons/Themey/themes/clashy/graphics/background.png" id="2_ec68w"]
@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dq0smbif3q47c" path="res://addons/Themey/themes/spacey/graphics/star.png" id="6_ca0so"]
 [ext_resource type="Texture2D" uid="uid://clt3dotkggvf0" path="res://addons/Themey/themes/spacey/graphics/coin.png" id="7_yvgl2"]
 [ext_resource type="Texture2D" uid="uid://cdcbxc25e1tou" path="res://addons/Themey/themes/spacey/graphics/gem.png" id="8_rm1df"]
-[ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://ExampleScene/MaterialIcons/24px/replay-24.svg" id="9_6qhhy"]
-[ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://ExampleScene/MaterialIcons/24px/home-24.svg" id="10_insef"]
+[ext_resource type="PackedScene" uid="uid://c2nckyocxegus" path="res://ExampleScene/ThemeyButton.tscn" id="9_bslvy"]
+[ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://ExampleScene/MaterialIcons/24px/replay-24.svg" id="11_1c7dl"]
+[ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://ExampleScene/MaterialIcons/24px/home-24.svg" id="12_2e8gi"]
 
 [node name="ThemeCanvasLayer" type="CanvasLayer"]
 
@@ -266,15 +267,16 @@ text = "500"
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ThemeyButton" parent="Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("9_bslvy")]
 layout_mode = 2
-icon = ExtResource("9_6qhhy")
+text = ""
+icon = ExtResource("11_1c7dl")
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ThemeyButton2" parent="Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("9_bslvy")]
 layout_mode = 2
-theme_type_variation = &"Button_Success"
 text = "Next Level"
 
-[node name="Button3" type="Button" parent="Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ThemeyButton3" parent="Control/MarginContainer/Control/CenteredContent/LevelCompletePanel/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("9_bslvy")]
 layout_mode = 2
-icon = ExtResource("10_insef")
+text = ""
+icon = ExtResource("12_2e8gi")

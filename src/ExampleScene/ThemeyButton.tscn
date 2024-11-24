@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c2nckyocxegus"]
+
+[node name="ThemeyButton" type="Button"]
+text = "Example Button"
