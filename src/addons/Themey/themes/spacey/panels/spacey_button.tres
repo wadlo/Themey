@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bu3asmtpckaun"]
+
+[ext_resource type="Texture2D" uid="uid://wagjgmneu4gi" path="res://addons/Themey/themes/spacey/graphics/spacey_button.png" id="1_seuff"]
+
+[resource]
+texture = ExtResource("1_seuff")
+texture_margin_left = 10.0
+texture_margin_top = 6.0
+texture_margin_right = 10.0
+texture_margin_bottom = 6.0

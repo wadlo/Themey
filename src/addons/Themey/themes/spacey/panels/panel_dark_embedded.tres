@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bprsypyw1uj11"]
+
+[ext_resource type="Texture2D" uid="uid://d2pg606v67t70" path="res://addons/Themey/themes/clashy/graphics/panel-embedded.svg" id="1_tklgp"]
+
+[resource]
+texture = ExtResource("1_tklgp")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 14.0

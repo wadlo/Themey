@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://8aoy2hfwk68y"]
+
+[ext_resource type="Texture2D" uid="uid://dtpd35mc827x" path="res://addons/Themey/themes/clashy/graphics/danger-button-pressed.svg" id="1_ct28n"]
+
+[resource]
+texture = ExtResource("1_ct28n")
+texture_margin_left = 16.0
+texture_margin_top = 10.0
+texture_margin_right = 16.0
+texture_margin_bottom = 21.0

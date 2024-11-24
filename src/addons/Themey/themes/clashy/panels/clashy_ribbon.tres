@@ -1,0 +1,18 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bw1fy6rgn16ft"]
+
+[ext_resource type="Texture2D" uid="uid://dt73dtm5ex5jd" path="res://addons/Themey/themes/clashy/graphics/ribbon.png" id="1_07ljf"]
+
+[resource]
+content_margin_left = 0.0
+content_margin_top = 9.0
+content_margin_right = 0.0
+content_margin_bottom = 34.0
+texture = ExtResource("1_07ljf")
+texture_margin_left = 85.0
+texture_margin_top = 19.0
+texture_margin_right = 85.0
+texture_margin_bottom = 67.0
+expand_margin_left = 55.0
+expand_margin_top = 6.0
+expand_margin_right = 55.0
+expand_margin_bottom = 33.0

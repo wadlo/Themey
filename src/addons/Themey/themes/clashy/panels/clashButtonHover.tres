@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://q222orvy57pf"]
+
+[ext_resource type="Texture2D" uid="uid://bo13685qkg80u" path="res://addons/Themey/themes/clashy/graphics/button-hover.svg" id="1_wox5v"]
+
+[resource]
+texture = ExtResource("1_wox5v")
+texture_margin_left = 16.0
+texture_margin_top = 10.0
+texture_margin_right = 16.0
+texture_margin_bottom = 21.0

@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cr8yu214v4imm"]
+
+[ext_resource type="Texture2D" uid="uid://cv8b4gawn8x2u" path="res://addons/Themey/themes/clashy/graphics/green-button-pressed.png" id="1_2obyt"]
+
+[resource]
+texture = ExtResource("1_2obyt")
+texture_margin_left = 16.0
+texture_margin_top = 10.0
+texture_margin_right = 16.0
+texture_margin_bottom = 21.0
